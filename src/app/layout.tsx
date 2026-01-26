@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pitstop - Professional Automotive Services",
-  description: "Fast, reliable automotive services with expert mechanics and quality guaranteed.",
+  title: "PITSTOP | Nairobi's Premier Grill & Rhumba Lounge",
+  description: "Experience the ultimate grill destination in Nairobi. Legendary Nyama Choma, soulful Rhumba sessions, and elite lounge experiences.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body>
         {children}
       </body>
     </html>

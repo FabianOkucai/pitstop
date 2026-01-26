@@ -1,0 +1,196 @@
+﻿/* PITSTOP PREMIUM DESIGN SYSTEM - OBSIDIAN & GOLD */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+  --background: #020202;
+  /* Even darker obsidian */
+  --foreground: #ffffff;
+  --brand: #FACC15;
+  --brand-muted: #A16207;
+  --surface: #0a0a0a;
+  --border: rgba(255, 255, 255, 0.08);
+  --white-40: rgba(255, 255, 255, 0.3);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-5: rgba(255, 255, 255, 0.04);
+  --ease-designer: cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+}
+
+body {
+  font-family: 'Michroma', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Gradient Glows */
+.bg-glow {
+  position: fixed;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.05) 0%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navbar/Button styling */
+.nav-btn {
+  font-family: 'Michroma', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  transition: all 0.8s var(--ease-designer);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn:hover {
+  background: white !important;
+  color: black !important;
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Typography Refinement */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Michroma', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, var(--brand) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.serif {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 200;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Premium Reveal Animations */
+@keyframes reveal {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  opacity: 0;
+  animation: reveal 2.5s var(--ease-designer) forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+/* Section Specifics */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+/* Experience Card Hover */
+.experience-card {
+  transition: all 1s var(--ease-designer);
+  filter: grayscale(0.5);
+}
+
+.experience-card:hover {
+  filter: grayscale(0);
+  transform: translateY(-10px);
+}
+
+/* Menu Item Detail */
+.menu-item {
+  border-bottom: 1px solid var(--white-5);
+  padding-bottom: 2rem;
+  transition: all 0.5s ease;
+}
+
+.menu-item:hover {
+  border-color: var(--brand);
+}
+
+/* Footer UX */
+.footer {
+  padding: 10rem 0 5rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.footer-label {
+  color: var(--brand);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}

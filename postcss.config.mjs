@@ -1,6 +1,6 @@
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    // Removed tailwindcss/postcss as requested to use Vanilla CSS
   },
 };
 
