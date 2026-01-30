@@ -7,7 +7,7 @@ export default function Stats() {
         { number: "5+", label: "Years of Excellence" },
         { number: "10K+", label: "Happy Guests" },
         { number: "50+", label: "Signature Dishes" },
-        { number: "24/7", label: "Premium Service" }
+        { number: "8AM-12PM", label: "Operating Hours" }
     ];
 
     return (
@@ -48,27 +48,27 @@ export default function Stats() {
 
             <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="stats-grid" style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                    gap: '3rem',
-                    textAlign: 'center'
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    gap: '2rem',
+                    textAlign: 'center',
+                    padding: '2rem 0'
                 }}>
                     {stats.map((stat, index) => (
                         <div key={index} className="stat-card" style={{
-                            padding: '2rem',
-                            borderRadius: '20px',
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            backdropFilter: 'blur(10px)',
-                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            padding: '1.5rem',
+                            minWidth: '180px',
                             transition: 'all 0.3s ease',
                             animation: `fadeInUp 0.8s ease-out ${index * 0.2}s both`
                         }}>
                             <div style={{
-                                fontFamily: 'Bahiana, sans-serif',
-                                fontSize: 'clamp(3rem, 6vw, 5rem)',
+                                fontFamily: 'Changa One, sans-serif',
+                                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                                 fontWeight: '400',
                                 lineHeight: '1',
-                                marginBottom: '1rem',
+                                marginBottom: '0.5rem',
                                 color: 'var(--accent)',
                                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
                             }}>
@@ -76,7 +76,8 @@ export default function Stats() {
                             </div>
                             <div className="label" style={{
                                 color: 'rgba(255, 255, 255, 0.9)',
-                                fontSize: '1.25rem'
+                                fontSize: '1rem',
+                                fontFamily: 'Changa One, sans-serif'
                             }}>
                                 {stat.label}
                             </div>

@@ -28,12 +28,12 @@ export default function Security() {
                             </h3>
                             <div style={{ marginBottom: '2rem' }}>
                                 <h4 style={{
-                                    fontFamily: 'Bahiana, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '1.5rem',
                                     marginBottom: '1rem',
                                     color: 'white'
                                 }}>
-                                    24/7 Security Personnel
+                                    8AM-12PM Security Personnel
                                 </h4>
                                 <p className="body-medium" style={{ 
                                     color: 'rgba(255, 255, 255, 0.8)',
@@ -44,7 +44,7 @@ export default function Security() {
                             </div>
                             <div style={{ marginBottom: '2rem' }}>
                                 <h4 style={{
-                                    fontFamily: 'Bahiana, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '1.5rem',
                                     marginBottom: '1rem',
                                     color: 'white'
@@ -102,7 +102,7 @@ export default function Security() {
                             </h3>
                             <div style={{ marginBottom: '2rem' }}>
                                 <h4 style={{
-                                    fontFamily: 'Bahiana, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '1.5rem',
                                     marginBottom: '1rem',
                                     color: 'white'
@@ -118,7 +118,7 @@ export default function Security() {
                             </div>
                             <div>
                                 <h4 style={{
-                                    fontFamily: 'Bahiana, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '1.5rem',
                                     marginBottom: '1rem',
                                     color: 'white'

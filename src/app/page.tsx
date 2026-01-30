@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import Stats from '@/components/Stats';
+import StatsSimple from '@/components/StatsSimple';
 import EventsSection from '@/components/EventsSection';
 import MenuSection from '@/components/MenuSection';
 import Testimonials from '@/components/Testimonials';
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
       <Hero />
-      <Stats />
+      <StatsSimple />
       <EventsSection />
       <MenuSection />
       <Staff />

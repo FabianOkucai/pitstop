@@ -44,7 +44,7 @@ export default function EventsSection() {
                     <div className="events-content" style={{ width: '100%' }}>
                         <div className="events-main" style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
                             {events.map((event, index) => (
-                                <div key={index} className={`event-item ${index % 2 === 1 ? 'event-reverse' : ''}`} style={{
+                                <div key={index} className={`event-item ${index % 2 === 1 ? 'event-reverse' : ''} animate-fadeInUp animate-delay-${index + 1}`} style={{
                                     display: 'grid',
                                     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                                     gap: '4rem',
@@ -52,7 +52,7 @@ export default function EventsSection() {
                                     width: '100%',
                                     textAlign: 'center'
                                 }}>
-                                    <div className={`event-image event-image-${index % 2}`} style={{
+                                    <div className={`event-image event-image-${index % 2} hover-scale`} style={{
                                         position: 'relative',
                                         height: '400px',
                                         width: '100%',

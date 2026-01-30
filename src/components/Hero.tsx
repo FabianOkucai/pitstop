@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Hero() {
     return (
         <section className="hero">
-            <a href="/book" className="btn-primary book-btn">
+            <a href="/book" className="btn-primary book-btn animate-fadeInUp animate-delay-2 hover-glow">
                 Book Table
             </a>
 
@@ -34,15 +34,15 @@ export default function Hero() {
 
             <div className="hero-content">
                 {/* Left Side - Text */}
-                <div className="hero-text">
+                <div className="hero-text animate-slideInLeft">
                     <div className="hero-title">
                         BENEDICTION OF THE GUEST
                     </div>
                 </div>
 
                 {/* Right Side - Bigger Styled Image */}
-                <div className="hero-image-container">
-                    <div className="hero-image-wrapper">
+                <div className="hero-image-container animate-slideInRight animate-delay-1">
+                    <div className="hero-image-wrapper hover-scale">
                         <Image
                             src="/images/food.png"
                             alt="Finest Experience"

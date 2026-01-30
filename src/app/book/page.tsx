@@ -27,15 +27,16 @@ export default function BookPage() {
             {/* Logo */}
             <Link href="/" style={{
                 position: 'absolute',
-                top: '2rem',
-                left: '2rem',
+                top: '1rem',
+                left: '50%',
+                transform: 'translateX(-50%)',
                 zIndex: 10
             }}>
                 <Image
                     src="/images/logo-main.jpg"
                     alt="PITSTOP Logo"
-                    width={80}
-                    height={80}
+                    width={60}
+                    height={60}
                     style={{ borderRadius: '50%', cursor: 'pointer' }}
                 />
             </Link>
@@ -67,15 +68,15 @@ export default function BookPage() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '2rem'
+                padding: '6rem 2rem 2rem 2rem'
             }}>
                 <div style={{
                     textAlign: 'center',
                     maxWidth: '600px'
                 }}>
                     <h1 style={{
-                        fontFamily: 'Bahiana, sans-serif',
-                        fontSize: 'clamp(3rem, 8vw, 6rem)',
+                        fontFamily: 'Changa One, sans-serif',
+                        fontSize: 'clamp(2rem, 6vw, 4rem)',
                         marginBottom: '2rem',
                         textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
                     }}>
@@ -84,7 +85,7 @@ export default function BookPage() {
                     </h1>
 
                     <p style={{
-                        fontFamily: 'Bahiana, sans-serif',
+                        fontFamily: 'Changa One, sans-serif',
                         fontSize: '2rem',
                         marginBottom: '1rem',
                         color: 'rgba(255, 255, 255, 0.9)',
@@ -94,7 +95,7 @@ export default function BookPage() {
                     </p>
 
                     <div style={{
-                        fontFamily: 'Bahiana, sans-serif',
+                        fontFamily: 'Changa One, sans-serif',
                         fontSize: '3rem',
                         color: 'var(--accent)',
                         textShadow: '2px 2px 4px rgba(0,0,0,0.7)'

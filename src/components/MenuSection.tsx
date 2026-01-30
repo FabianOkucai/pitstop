@@ -7,49 +7,34 @@ export default function MenuSection() {
         {
             category: "Signature Grills",
             items: [
-                { name: "Premium Nyama Choma", description: "Slow-grilled perfection", price: "KSh 2,800" },
-                { name: "Wagyu Beef Steak", description: "Grade A5 excellence", price: "KSh 4,500" },
-                { name: "Grilled Tilapia", description: "Lake Victoria fresh", price: "KSh 1,800" },
-                { name: "Grilled Salmon", description: "Atlantic premium cut", price: "KSh 3,200" },
-                { name: "Red Snapper", description: "Ocean fresh delight", price: "KSh 2,400" },
-                { name: "Grilled Chicken", description: "Free-range perfection", price: "KSh 1,500" },
-                { name: "Pork Ribs", description: "Smoky barbecue style", price: "KSh 2,200" }
+                { name: "Premium Nyama Choma", description: "Slow-grilled perfection" },
+                { name: "Wagyu Beef Steak", description: "Grade A5 excellence" },
+                { name: "Grilled Tilapia", description: "Lake Victoria fresh" },
+                { name: "Grilled Chicken", description: "Free-range perfection" }
             ]
         },
         {
             category: "Local Favorites",
             items: [
-                { name: "Ugali Special", description: "Traditional maize meal", price: "KSh 200" },
-                { name: "Sukuma Wiki", description: "Fresh collard greens", price: "KSh 300" },
-                { name: "Githeri Deluxe", description: "Beans and maize", price: "KSh 450" },
-                { name: "Chapati Fresh", description: "Soft flatbread", price: "KSh 150" }
+                { name: "Ugali Special", description: "Traditional maize meal" },
+                { name: "Sukuma Wiki", description: "Fresh collard greens" },
+                { name: "Chapati Fresh", description: "Soft flatbread" }
             ]
         },
         {
             category: "Craft Cocktails",
             items: [
-                { name: "Rhumba Sunset", description: "Rum, passion, lime", price: "KSh 950" },
-                { name: "Nairobi Nights", description: "Gin, elderflower magic", price: "KSh 850" },
-                { name: "Safari Mule", description: "Vodka, ginger, baobab", price: "KSh 750" }
+                { name: "PITSTOP Signature", description: "House special blend" },
+                { name: "Nairobi Nights", description: "Premium whiskey cocktail" },
+                { name: "Tropical Sunset", description: "Rum-based delight" }
             ]
         },
         {
-            category: "Del Monte Juices",
+            category: "Premium Drinks",
             items: [
-                { name: "Pineapple Juice", description: "Pure tropical sweetness", price: "KSh 350" },
-                { name: "Orange Juice", description: "Fresh citrus burst", price: "KSh 300" },
-                { name: "Mango Juice", description: "Exotic fruit blend", price: "KSh 380" },
-                { name: "Apple Juice", description: "Crisp orchard fresh", price: "KSh 320" }
-            ]
-        },
-        {
-            category: "Premium Spirits",
-            items: [
-                { name: "Hennessy Paradis", description: "Cognac excellence", price: "KSh 45,000" },
-                { name: "Dom Perignon", description: "Champagne royalty", price: "KSh 28,000" },
-                { name: "Macallan 25", description: "Scottish whisky legend", price: "KSh 85,000" },
-                { name: "Grey Goose", description: "Premium vodka", price: "KSh 12,000" },
-                { name: "Martell Cordon Bleu", description: "French cognac", price: "KSh 18,000" }
+                { name: "Tusker Lager", description: "Kenya's finest beer" },
+                { name: "Guinness Stout", description: "Rich and creamy" },
+                { name: "Johnnie Walker Black", description: "Premium Scotch whisky" }
             ]
         }
     ];
@@ -101,9 +86,8 @@ export default function MenuSection() {
                             {menuItems.map((category, index) => (
                                 <div key={index} className={`menu-category ${index === 0 ? 'menu-category-main' : ''}`}>
                                     <h3 className="heading-large" style={{
-                                        marginBottom: '2rem',
-                                        paddingBottom: '1rem',
-                                        borderBottom: '2px solid var(--accent)'
+                                        marginBottom: '1rem',
+                                        paddingBottom: '1rem'
                                     }}>
                                         <span style={{ color: 'var(--foreground)' }}>
                                             {category.category.split(' ')[0]}
@@ -113,12 +97,22 @@ export default function MenuSection() {
                                         </span>
                                     </h3>
 
+                                    {/* Line between title and menu items */}
+                                    <div style={{
+                                        width: '100%',
+                                        height: '1px',
+                                        background: 'linear-gradient(90deg, transparent 0%, var(--accent) 20%, var(--accent) 80%, transparent 100%)',
+                                        marginBottom: '2rem',
+                                        boxShadow: '0 0 5px rgba(255, 215, 0, 0.2)'
+                                    }}></div>
+
                                     <div className="menu-items-grid">
                                         {category.items.map((item, itemIndex) => (
-                                            <div key={itemIndex} style={{
+                                            <div key={itemIndex} className={`animate-fadeInUp animate-delay-${itemIndex + 1} hover-scale`} style={{
                                                 padding: '1.5rem',
                                                 background: 'rgba(0,0,0,0.02)',
-                                                borderRadius: '15px'
+                                                borderRadius: '15px',
+                                                transition: 'all 0.3s ease'
                                             }}>
                                                 <div style={{
                                                     display: 'flex',
@@ -127,11 +121,14 @@ export default function MenuSection() {
                                                     marginBottom: '0.5rem'
                                                 }}>
                                                     <h4 style={{
-                                                        fontFamily: 'Bahiana, sans-serif',
-                                                        fontSize: '1.25rem',
+                                                        fontFamily: 'Changa One, sans-serif',
+                                                        fontSize: '1rem',
                                                         fontWeight: '400',
                                                         flex: 1
                                                     }}>
+                                                        <span style={{ color: 'var(--accent)', marginRight: '0.5rem' }}>
+                                                            {['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'][itemIndex]}.
+                                                        </span>
                                                         <span style={{ color: 'var(--foreground)' }}>
                                                             {item.name.split(' ').slice(0, Math.ceil(item.name.split(' ').length / 2)).join(' ')}
                                                         </span>{' '}
@@ -139,19 +136,10 @@ export default function MenuSection() {
                                                             {item.name.split(' ').slice(Math.ceil(item.name.split(' ').length / 2)).join(' ')}
                                                         </span>
                                                     </h4>
-                                                    <div style={{
-                                                        fontFamily: 'Bahiana, sans-serif',
-                                                        fontSize: '1.25rem',
-                                                        fontWeight: '400',
-                                                        color: 'var(--accent-dark)',
-                                                        marginLeft: '1rem'
-                                                    }}>
-                                                        {item.price}
-                                                    </div>
                                                 </div>
                                                 <p style={{
-                                                    fontFamily: 'Bahiana, sans-serif',
-                                                    fontSize: '1rem',
+                                                    fontFamily: 'Changa One, sans-serif',
+                                                    fontSize: '0.875rem',
                                                     color: 'var(--text-muted)',
                                                     lineHeight: '1.4'
                                                 }}>

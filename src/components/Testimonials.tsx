@@ -46,7 +46,7 @@ export default function Testimonials() {
                             </div>
                             
                             <p style={{
-                                fontFamily: 'Bahiana, sans-serif',
+                                fontFamily: 'Changa One, sans-serif',
                                 fontSize: '1.25rem',
                                 lineHeight: '1.6',
                                 color: 'var(--text-muted)',
@@ -58,7 +58,7 @@ export default function Testimonials() {
                             
                             <div>
                                 <h4 style={{
-                                    fontFamily: 'Bahiana, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '1.375rem',
                                     fontWeight: '400',
                                     marginBottom: '0.25rem',
@@ -67,7 +67,7 @@ export default function Testimonials() {
                                     {testimonial.name}
                                 </h4>
                                 <p style={{
-                                    fontFamily: 'Bahiana, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '1.125rem',
                                     color: 'var(--accent-dark)',
                                     textTransform: 'uppercase',

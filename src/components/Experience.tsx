@@ -66,7 +66,7 @@ export default function Experience() {
                                     fontSize: '2rem',
                                     lineHeight: '1.7',
                                     color: 'rgba(255, 255, 255, 0.8)',
-                                    fontFamily: 'Bahiana, sans-serif'
+                                    fontFamily: 'Changa One', sans-serif
                                 }}>
                                     Elite service. Memorable moments.
                                 </p>

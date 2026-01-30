@@ -33,7 +33,7 @@ export default function Booking() {
                                 Quick Contact
                             </div>
                             <p style={{
-                                fontFamily: 'Inter, sans-serif',
+                                fontFamily: 'Changa One, sans-serif',
                                 fontSize: '0.875rem',
                                 color: 'var(--text-muted)',
                                 lineHeight: '1.6'
@@ -61,7 +61,7 @@ export default function Booking() {
                                     style={{
                                         padding: '1rem',
                                         border: '1px solid var(--border)',
-                                        fontFamily: 'Inter, sans-serif',
+                                        fontFamily: 'Changa One, sans-serif',
                                         fontSize: '0.875rem',
                                         background: 'var(--surface)'
                                     }}
@@ -72,7 +72,7 @@ export default function Booking() {
                                     style={{
                                         padding: '1rem',
                                         border: '1px solid var(--border)',
-                                        fontFamily: 'Inter, sans-serif',
+                                        fontFamily: 'Changa One, sans-serif',
                                         fontSize: '0.875rem',
                                         background: 'var(--surface)'
                                     }}
@@ -85,7 +85,7 @@ export default function Booking() {
                                 style={{
                                     padding: '1rem',
                                     border: '1px solid var(--border)',
-                                    fontFamily: 'Inter, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '0.875rem',
                                     background: 'var(--surface)'
                                 }}
@@ -97,7 +97,7 @@ export default function Booking() {
                                     style={{
                                         padding: '1rem',
                                         border: '1px solid var(--border)',
-                                        fontFamily: 'Inter, sans-serif',
+                                        fontFamily: 'Changa One, sans-serif',
                                         fontSize: '0.875rem',
                                         background: 'var(--surface)'
                                     }}
@@ -105,7 +105,7 @@ export default function Booking() {
                                 <select style={{
                                     padding: '1rem',
                                     border: '1px solid var(--border)',
-                                    fontFamily: 'Inter, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '0.875rem',
                                     background: 'var(--surface)'
                                 }}>
@@ -123,7 +123,7 @@ export default function Booking() {
                                 style={{
                                     padding: '1rem',
                                     border: '1px solid var(--border)',
-                                    fontFamily: 'Inter, sans-serif',
+                                    fontFamily: 'Changa One, sans-serif',
                                     fontSize: '0.875rem',
                                     background: 'var(--surface)',
                                     resize: 'vertical'
