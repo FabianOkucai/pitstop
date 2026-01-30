@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  devIndicators: {
-    buildActivity: false,
-  },
+  devIndicators: {},
   experimental: {
     serverActions: {
       allowedOrigins: ["localhost:3001"],

@@ -29,8 +29,8 @@ export default function Experience() {
                                 gap: '3rem',
                                 alignItems: 'center'
                             }}>
-                                <div style={{ 
-                                    position: 'relative', 
+                                <div style={{
+                                    position: 'relative',
                                     height: '400px',
                                     borderRadius: '20px',
                                     overflow: 'hidden'
@@ -53,20 +53,20 @@ export default function Experience() {
                             </div>
 
                             {/* Premium Lounge - Text Only */}
-                            <div style={{ 
-                                background: 'var(--foreground)', 
-                                color: 'white', 
+                            <div style={{
+                                background: 'var(--foreground)',
+                                color: 'white',
                                 padding: '4rem',
                                 borderRadius: '30px'
                             }}>
                                 <h3 className="heading-large" style={{ marginBottom: '1rem', color: 'var(--accent)' }}>
                                     Premium Lounge Experience
                                 </h3>
-                                <p style={{ 
+                                <p style={{
                                     fontSize: '2rem',
                                     lineHeight: '1.7',
                                     color: 'rgba(255, 255, 255, 0.8)',
-                                    fontFamily: 'Changa One', sans-serif
+                                    fontFamily: "'Changa One', sans-serif"
                                 }}>
                                     Elite service. Memorable moments.
                                 </p>
