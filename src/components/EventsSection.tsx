@@ -30,12 +30,8 @@ export default function EventsSection() {
         <section id="events" className="section">
             <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <div className="events-layout" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div className="vertical-title events-title" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        EVENTS & EXPERIENCES
-                    </div>
-
                     <div className="events-content" style={{ width: '100%' }}>
-                        {/* Featured Experience Hero Image */}
+                        {/* Featured Experience Hero Image with Title Background */}
                         <div className="animate-fadeIn" style={{
                             position: 'relative',
                             height: '500px',
@@ -43,7 +39,10 @@ export default function EventsSection() {
                             marginBottom: '6rem',
                             borderRadius: '40px',
                             overflow: 'hidden',
-                            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
                         }}>
                             <Image
                                 src="/assets/images/experience_three.png"
@@ -55,8 +54,22 @@ export default function EventsSection() {
                             <div style={{
                                 position: 'absolute',
                                 inset: 0,
-                                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.4))'
+                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6))',
+                                zIndex: 1
                             }}></div>
+                            <h2 className="vertical-title events-title" style={{
+                                position: 'relative',
+                                zIndex: 2,
+                                textAlign: 'center',
+                                margin: 0,
+                                fontSize: 'clamp(2.5rem, 6vw, 5rem)',
+                                letterSpacing: '0.1em',
+                                filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))',
+                                // Overriding transparency if it's too hard to see, but keeping the class for brand consistency
+                                color: 'var(--accent)'
+                            }}>
+                                EVENTS & EXPERIENCES
+                            </h2>
                         </div>
 
                         <div className="events-main" style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
