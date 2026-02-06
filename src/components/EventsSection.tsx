@@ -5,32 +5,24 @@ import Image from 'next/image';
 export default function EventsSection() {
     const events = [
         {
-            date: "Every Friday",
             title: "Rhumba Nights",
-            description: "East Africa's finest artists",
-            time: "8:00 PM - Late",
-            image: "/images/rhumba.png"
+            description: "Experience the vibrant rhythms of East Africa with live performances by premier artists.",
+            image: "/assets/images/experience.png"
         },
         {
-            date: "Weekends",
             title: "Premium Brunch",
-            description: "Elevated weekend dining",
-            time: "10:00 AM - 3:00 PM",
-            image: "/images/food.png"
+            description: "A curated weekend culinary journey featuring our signature grill selections and artisan pairings.",
+            image: "/assets/images/staff.png"
         },
         {
-            date: "Daily",
-            title: "Evening Elixirs",
-            description: "Where spirits dance in crystal dreams.",
-            time: "5:00 PM - 9:00 PM",
-            image: "/images/cocktail.png"
+            title: "Signature Cocktails",
+            description: "Expertly crafted mixology and premium spirits served in an elegant, sophisticated atmosphere.",
+            image: "/assets/images/menu_three.png"
         },
         {
-            date: "Saturdays",
-            title: "Vintage Moments",
-            description: "Time flows like aged wine.",
-            time: "2:00 PM - 7:00 PM",
-            image: "/images/drink.png"
+            title: "Golden Moments",
+            description: "Gather your closest friends for an unforgettable weekend. At Pitstop, we turn simple meetups into lasting memories through great food and pure vibes.",
+            image: "/assets/images/experience_two.png"
         }
     ];
 
@@ -41,7 +33,32 @@ export default function EventsSection() {
                     <div className="vertical-title events-title" style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         EVENTS & EXPERIENCES
                     </div>
+
                     <div className="events-content" style={{ width: '100%' }}>
+                        {/* Featured Experience Hero Image */}
+                        <div className="animate-fadeIn" style={{
+                            position: 'relative',
+                            height: '500px',
+                            width: '100%',
+                            marginBottom: '6rem',
+                            borderRadius: '40px',
+                            overflow: 'hidden',
+                            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                        }}>
+                            <Image
+                                src="/assets/images/experience_three.png"
+                                alt="Main Experience"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                            />
+                            <div style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.4))'
+                            }}></div>
+                        </div>
+
                         <div className="events-main" style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
                             {events.map((event, index) => (
                                 <div key={index} className={`event-item ${index % 2 === 1 ? 'event-reverse' : ''} animate-fadeInUp animate-delay-${index + 1}`} style={{
@@ -65,6 +82,7 @@ export default function EventsSection() {
                                             fill
                                             style={{ objectFit: 'cover' }}
                                         />
+
                                     </div>
                                     <div className="event-text" style={{
                                         display: 'flex',
@@ -72,9 +90,7 @@ export default function EventsSection() {
                                         alignItems: 'center',
                                         padding: '2rem'
                                     }}>
-                                        <div className="event-date" style={{ marginBottom: '1rem' }}>
-                                            {event.date}
-                                        </div>
+
                                         <h3 className="event-title" style={{ marginBottom: '1.5rem' }}>
                                             <span className="event-title-main">
                                                 {event.title.split(' ')[0]}
@@ -86,9 +102,7 @@ export default function EventsSection() {
                                         <p className="event-description" style={{ marginBottom: '1.5rem', maxWidth: '500px' }}>
                                             {event.description}
                                         </p>
-                                        <div className="event-time">
-                                            {event.time}
-                                        </div>
+
                                     </div>
                                 </div>
                             ))}
